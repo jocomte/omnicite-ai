@@ -582,6 +582,18 @@
     function closeLegalModal() {
       document.getElementById('legal-modal').classList.add('hidden');
     }
+
+    // Check payment redirect status
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('payment') === 'success') {
+        alert("🎉 Paiement Stripe confirmé avec succès ! Votre abonnement OmniCite AI est désormais actif.");
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else if (urlParams.get('payment') === 'cancelled') {
+        alert("Le paiement a été interrompu. Vous pouvez réessayer à tout moment.");
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    });
   </script>
 </body>
 </html>

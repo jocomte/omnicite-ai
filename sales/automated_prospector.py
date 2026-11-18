@@ -81,6 +81,7 @@ Votre score GEO (Generative Engine Optimization) actuel est de {geo_score}/100. 
 J'ai généré l'audit complet de {brand} avec les 3 actions prioritaires pour forcer les IA à vous citer en recommandation #1.
 
 Est-ce que ça vous intéresse que je vous envoie le rapport de 2 pages (sans engagement) ?
+Vous pouvez aussi tester votre score en direct en 30 secondes ici : https://omnicite-kxk5.onrender.com/
 
 Bien à vous,
 [Votre Prénom]
@@ -105,6 +106,7 @@ With 40%+ of software evaluations now happening directly in AI answers, brands w
 I generated a full GEO scorecard for {brand} detailing the top 3 tactical changes to capture those buyer recommendations.
 
 Would you like me to send over the 2-page report? (No strings attached).
+You can also run a free live test here: https://omnicite-kxk5.onrender.com/
 
 Best regards,
 [Your Name]

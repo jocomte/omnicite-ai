@@ -21,7 +21,23 @@ PORT = int(os.environ.get("PORT", 8000))
 STATIC_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.environ.get("DB_PATH", os.path.join(STATIC_DIR, "omnicite.db"))
 
-# Optional API Keys from environment
+# Automatically load .env file if present
+def _load_env():
+    env_file = os.path.join(STATIC_DIR, ".env")
+    if os.path.exists(env_file):
+        with open(env_file, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip().strip('"').strip("'")
+                    if k and k not in os.environ:
+                        os.environ[k] = v
+
+_load_env()
+
+# API Keys from environment
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 PERPLEXITY_API_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
@@ -459,19 +475,24 @@ class OmniCiteHandler(http.server.SimpleHTTPRequestHandler):
             }
             chosen = price_map.get(plan, price_map["pro"])
 
+            # Determine current origin for Stripe redirects
+            host = self.headers.get('Host', f'localhost:{PORT}')
+            proto = 'https' if self.headers.get('X-Forwarded-Proto') == 'https' or not host.startswith('localhost') else 'http'
+            base_url = f"{proto}://{host}"
+
             # If STRIPE_SECRET_KEY is provided, initiate real Stripe session
             if STRIPE_SECRET_KEY:
                 try:
                     stripe_data = urllib.parse.urlencode({
-                        "payment_method_types[0]": "card",
                         "mode": "subscription",
                         "line_items[0][price_data][currency]": "eur",
                         "line_items[0][price_data][product_data][name]": chosen["name"],
+                        "line_items[0][price_data][product_data][tax_code]": "txcd_10103000",
                         "line_items[0][price_data][unit_amount]": chosen["price"],
                         "line_items[0][price_data][recurring][interval]": "month",
                         "line_items[0][quantity]": 1,
-                        "success_url": "http://localhost:8000/?payment=success&session_id={CHECKOUT_SESSION_ID}",
-                        "cancel_url": "http://localhost:8000/?payment=cancelled"
+                        "success_url": f"{base_url}/?payment=success&session_id={{CHECKOUT_SESSION_ID}}",
+                        "cancel_url": f"{base_url}/?payment=cancelled"
                     }).encode('utf-8')
 
                     req = urllib.request.Request(

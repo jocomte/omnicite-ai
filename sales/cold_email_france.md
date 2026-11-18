@@ -28,7 +28,7 @@ Elle ne vend pas un énième outil de reporting. Elle exploite le **FOMO (peur d
 > Bien à vous,  
 > **[Votre Prénom]**  
 > Fondateur de OmniCite AI  
-> *PS : Vous pouvez aussi tester votre score en direct ici : [Lien vers votre site OmniCite]*
+> *PS : Vous pouvez aussi tester votre score en direct ici : https://omnicite-kxk5.onrender.com/*
 
 ---
 
@@ -64,7 +64,7 @@ Elle ne vend pas un énième outil de reporting. Elle exploite le **FOMO (peur d
 > 
 > Je classe le dossier pour le moment.
 > 
-> Si le sujet redevient d'actualité, vous pouvez lancer un audit gratuit de votre visibilité en 30 secondes ici : [Lien de votre site].
+> Si le sujet redevient d'actualité, vous pouvez lancer un audit gratuit de votre visibilité en 30 secondes ici : https://omnicite-kxk5.onrender.com/.
 > 
 > Excellente continuation à vous et à l'équipe [Leur Marque] !
 > 

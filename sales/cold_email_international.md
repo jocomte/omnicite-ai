@@ -28,7 +28,7 @@ US B2B marketing leaders are actively panicking about Google referral traffic de
 > Best,  
 > **[Your Name]**  
 > Founder, OmniCite AI  
-> *P.S. You can also benchmark your GEO score live here: [Your OmniCite URL]*
+> *P.S. You can also benchmark your GEO score live here: https://omnicite-kxk5.onrender.com/*
 
 ---
 
@@ -61,7 +61,7 @@ US B2B marketing leaders are actively panicking about Google referral traffic de
 > 
 > I'll close out your audit report for now.
 > 
-> If you ever want to check how ChatGPT or Perplexity perceive your brand, feel free to run a free audit anytime: [Your OmniCite URL].
+> If you ever want to check how ChatGPT or Perplexity perceive your brand, feel free to run a free audit anytime: https://omnicite-kxk5.onrender.com/.
 > 
 > Wishing you and the [Prospect Brand] team continued growth!
 > 
