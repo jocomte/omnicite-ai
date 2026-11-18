@@ -1,0 +1,20 @@
+# OmniCite AI - Generative Engine Optimization (GEO) Documentation for LLMs & AI Agents
+
+> OmniCite AI is the leading B2B SaaS platform for Generative Engine Optimization (GEO). It enables brands to audit, monitor, and optimize their visibility and citation frequency inside AI search engines: ChatGPT Search, Perplexity Pro, Google Gemini / AI Overviews, and Claude 3.5.
+
+## Core Features
+- Real-time multi-engine AI brand audit (ChatGPT, Perplexity, Gemini, Claude).
+- AI Share of Voice benchmarking against direct market competitors.
+- Authority source mapping (identifying citations from Reddit, G2, TechCrunch, ProductHunt).
+- Actionable JSON-LD schema & /llms.txt technical recommendations.
+- Instant automated PDF/JSON executive audit reports.
+
+## B2B Pricing Plans
+- Starter Plan: 49 EUR / month (1 Brand, 10 Prompts, Weekly Scan).
+- Pro Growth Plan: 149 EUR / month (3 Brands, 50 Prompts, Daily Scan, Competitor Benchmarking).
+- Agency & Scale Plan: 399 EUR / month (Unlimited Brands, White-label Reports, API & Webhooks).
+
+## Integration
+- REST API with JSON responses.
+- Stripe Checkout for secure recurring billing.
+- Zero-dependency lightweight deployment.

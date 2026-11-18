@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniCite AI | GEO & AI Search Visibility SaaS</title>
+  <meta name="description" content="Auditez et optimisez la visibilité de votre marque sur ChatGPT Search, Perplexity Pro, Google Gemini et Claude. Le SaaS #1 de Generative Engine Optimization (GEO).">
+  <meta name="keywords" content="GEO, Generative Engine Optimization, AI Search Visibility, SEO IA, ChatGPT Search, Perplexity audit, part de voix IA">
+  <meta property="og:title" content="OmniCite AI | GEO & AI Search Visibility SaaS">
+  <meta property="og:description" content="Découvrez si ChatGPT et Perplexity recommandent votre produit ou vos concurrents. Audit gratuit en 30 secondes.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org SoftwareApplication JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OmniCite AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "49.00",
+      "priceCurrency": "EUR"
+    },
+    "description": "Generative Engine Optimization (GEO) platform that monitors and optimizes brand citations across AI search engines."
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            darkbg: '#090d16',
+            cardbg: '#111827',
+            cardborder: '#1f2937'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glow-bg {
+      background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.22) 0%, rgba(9, 13, 22, 0) 70%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="bg-[#090d16] text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Glow Background Effect -->
+  <div class="fixed top-0 left-0 w-full h-[500px] glow-bg pointer-events-none -z-10"></div>
+
+  <!-- Header -->
+  <header class="border-b border-slate-800/80 backdrop-blur-md sticky top-0 z-50 bg-[#090d16]/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-500/30">
+          <i class="fa-solid fa-radar text-white text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-indigo-300">OmniCite</span>
+          <span class="text-xs ml-1 px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 font-semibold border border-brand-500/30">GEO SaaS</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm text-slate-300 font-medium">
+        <a href="#audit-tool" class="hover:text-white transition">Audit Gratuit</a>
+        <a href="#features" class="hover:text-white transition">Comment ça marche</a>
+        <a href="#pricing" class="hover:text-white transition">Tarifs B2B</a>
+        <a href="#prospects" class="hover:text-white transition">Dashboard Leads</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <a href="#audit-tool" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5">
+          Tester mon score IA
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-950/60 border border-brand-500/30 text-indigo-300 text-xs font-semibold mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>Le SEO classique est mort. Bienvenue dans l'ère du GEO (Generative Engine Optimization).</span>
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      Vos concurrents vous volent vos clients sur <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-indigo-300 to-purple-400">ChatGPT Search & Perplexity</span>
+    </h1>
+
+    <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto">
+      Auditez instantanément la visibilité de votre marque dans les moteurs d'IA générative. Découvrez si les LLMs vous recommandent ou s'ils envoient vos prospects à vos concurrents.
+    </p>
+
+    <!-- Audit Live Form -->
+    <div id="audit-tool" class="mt-10 max-w-3xl mx-auto bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm text-left">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+        <h3 class="text-lg font-bold text-white flex items-center space-x-2">
+          <i class="fa-solid fa-wand-magic-sparkles text-brand-400"></i>
+          <span>Lancer un Audit de Visibilité IA Immédiat</span>
+        </h3>
+        <div class="flex items-center space-x-1.5 text-xs">
+          <span class="text-slate-400">Exemples 1-clic :</span>
+          <button type="button" onclick="fillExample('Pennylane', 'pennylane.com', 'Comptabilité & Facturation', 'QuickBooks, Tiime')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-brand-300 transition">Pennylane</button>
+          <button type="button" onclick="fillExample('Lemlist', 'lemlist.com', 'Cold Email B2B', 'Woodpecker, Instantly')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-brand-300 transition">Lemlist</button>
+          <button type="button" onclick="fillExample('Notion', 'notion.so', 'Workspace & Docs', 'Airtable, ClickUp')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-brand-300 transition">Notion</button>
+        </div>
+      </div>
+
+      <form id="audit-form" class="space-y-4" onsubmit="handleAuditSubmit(event)">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Nom de votre marque *</label>
+            <input type="text" id="brand-input" required placeholder="Ex: Lemlist, Pennylane, Notion" 
+              class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Site Web / Domaine</label>
+            <input type="text" id="domain-input" placeholder="Ex: lemlist.com" 
+              class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Secteur / Catégorie B2B</label>
+            <input type="text" id="category-input" placeholder="Ex: Cold Email B2B, Facturation, CRM" 
+              class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Vos 2 ou 3 concurrents directs</label>
+            <input type="text" id="competitors-input" placeholder="Ex: Woodpecker, Instantly, Apollo" 
+              class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" 
+          class="w-full mt-2 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 hover:from-brand-500 hover:to-purple-500 text-white font-bold text-base shadow-xl shadow-brand-500/25 transition transform active:scale-[0.99] flex items-center justify-center space-x-2">
+          <span>Générer mon Score GEO & Audit IA (Gratuit)</span>
+          <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Live Audit Results Container (hidden by default) -->
+  <section id="results-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center pb-6 border-b border-slate-800 gap-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider font-semibold text-brand-400">Rapport d'audit officiel</span>
+          <h2 id="res-brand-title" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Audit : Marque</h2>
+          <p id="res-category-subtitle" class="text-sm text-slate-400">Secteur : Logiciel B2B</p>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <button onclick="openLeadModal()" class="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold transition flex items-center space-x-2 shadow-lg shadow-emerald-600/20">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Débloquer le Rapport PDF</span>
+          </button>
+          <a href="#pricing" class="px-4 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold transition">
+            Surveiller en continu
+          </a>
+        </div>
+      </div>
+
+      <!-- KPI Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-8">
+        <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center">
+          <span class="text-xs text-slate-400 uppercase font-semibold">Score GEO Global</span>
+          <div id="res-geo-score" class="text-5xl font-black text-brand-400 my-2">--/100</div>
+          <span id="res-sentiment-badge" class="inline-block text-xs px-2.5 py-1 rounded-full bg-brand-500/20 text-brand-300 font-semibold">Analyse en cours</span>
+        </div>
+
+        <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center">
+          <span class="text-xs text-slate-400 uppercase font-semibold">Taux de Citation IA</span>
+          <div id="res-citation-rate" class="text-5xl font-black text-emerald-400 my-2">--%</div>
+          <span class="text-xs text-slate-400">Présence dans les réponses clés</span>
+        </div>
+
+        <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center">
+          <span class="text-xs text-slate-400 uppercase font-semibold">Moteurs IA Testés</span>
+          <div class="text-4xl font-black text-white my-2">4/4</div>
+          <span class="text-xs text-slate-400">ChatGPT, Perplexity, Gemini, Claude</span>
+        </div>
+      </div>
+
+      <!-- Charts & Engines breakdown -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+        <!-- Share of Voice Donut -->
+        <div class="bg-slate-800/30 border border-slate-800 rounded-xl p-6">
+          <h4 class="text-base font-bold text-white mb-4 flex items-center space-x-2">
+            <i class="fa-solid fa-chart-pie text-brand-400"></i>
+            <span>Part de Voix IA face aux concurrents (Share of Voice)</span>
+          </h4>
+          <div class="h-64 flex items-center justify-center">
+            <canvas id="sovChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Engines Breakdown -->
+        <div class="bg-slate-800/30 border border-slate-800 rounded-xl p-6">
+          <h4 class="text-base font-bold text-white mb-4 flex items-center space-x-2">
+            <i class="fa-solid fa-server text-indigo-400"></i>
+            <span>Détail par Moteur de Recherche Génératif</span>
+          </h4>
+          <div id="engines-list" class="space-y-3">
+            <!-- Dynamically injected -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Actionable GEO Recommendations -->
+      <div class="my-8">
+        <h4 class="text-lg font-bold text-white mb-4 flex items-center space-x-2">
+          <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+          <span>Plan d'Action Correctif : Forcer les LLMs à vous recommander</span>
+        </h4>
+        <div id="recs-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Dynamically injected -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Tarification B2B Simple & Rentable</h2>
+      <p class="mt-4 text-slate-400 text-base">Surveillez vos citations IA chaque semaine ou chaque jour. Aucun engagement, annulation en un clic.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <span class="text-sm font-semibold text-slate-400">Starter</span>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-extrabold text-white">49 €</span>
+            <span class="ml-1 text-slate-400 text-sm">/ mois</span>
+          </div>
+          <p class="mt-4 text-xs text-slate-400">Idéal pour fondateurs solo et startups en lancement.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>1 Marque surveillée</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>10 Requêtes IA scannées</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Scan hebdomadaire</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Rapports email mensuels</span></li>
+          </ul>
+        </div>
+        <button onclick="handleSubscribe('starter')" class="mt-8 w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition">
+          Souscrire au Starter
+        </button>
+      </div>
+
+      <!-- Pro Growth Plan (Featured) -->
+      <div class="bg-gradient-to-b from-slate-900 to-indigo-950/40 border-2 border-brand-500 rounded-2xl p-8 flex flex-col justify-between shadow-2xl shadow-brand-500/20 relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-brand-500 text-white font-bold text-xs uppercase tracking-wider">
+          Le Plus Populaire
+        </div>
+        <div>
+          <span class="text-sm font-semibold text-brand-300">Pro Growth</span>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-extrabold text-white">149 €</span>
+            <span class="ml-1 text-slate-400 text-sm">/ mois</span>
+          </div>
+          <p class="mt-4 text-xs text-slate-300">Pour SaaS B2B et PME voulant dominer leur secteur sur l'IA.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-200">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span><strong>3 Marques</strong> surveillées</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span><strong>50 Requêtes</strong> IA scannées</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span><strong>Scan quotidien</strong> automatique</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Benchmark 3 concurrents</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Alertes chute de citation</span></li>
+          </ul>
+        </div>
+        <button onclick="handleSubscribe('pro')" class="mt-8 w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm shadow-lg shadow-brand-500/30 transition">
+          Choisir Pro Growth
+        </button>
+      </div>
+
+      <!-- Agency & Scale -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+        <div>
+          <span class="text-sm font-semibold text-slate-400">Agency & Scale</span>
+          <div class="mt-4 flex items-baseline">
+            <span class="text-4xl font-extrabold text-white">399 €</span>
+            <span class="ml-1 text-slate-400 text-sm">/ mois</span>
+          </div>
+          <p class="mt-4 text-xs text-slate-400">Pour agences SEO, grands comptes et régies marketing.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300">
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span><strong>Marques illimitées</strong></span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Rapports en <strong>marque blanche</strong></span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Accès complet API & Webhooks</span></li>
+            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i><span>Support dédié Slack / WhatsApp</span></li>
+          </ul>
+        </div>
+        <button onclick="handleSubscribe('agency')" class="mt-8 w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition">
+          Contacter pour Agency
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture Modal (Lead Magnet) -->
+  <div id="lead-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 text-left relative shadow-2xl">
+      <button onclick="closeLeadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+        <i class="fa-solid fa-envelope-open-text text-xl"></i>
+      </div>
+
+      <h3 class="text-xl font-bold text-white">Recevoir le rapport complet</h3>
+      <p class="text-xs text-slate-400 mt-1">Entrez votre email professionnel pour débloquer l'export PDF et les recommandations approfondies.</p>
+
+      <form id="lead-form" class="mt-4 space-y-3" onsubmit="handleLeadSubmit(event)">
+        <input type="email" id="lead-email" required placeholder="nom@entreprise.com" 
+          class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500">
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition">
+          Télécharger mon rapport
+        </button>
+      </form>
+      <p class="text-[10px] text-slate-500 mt-3 text-center">Conformité RGPD garantie. Pas de spam, désinscription en 1 clic.</p>
+    </div>
+  </div>
+
+  <!-- Legal Modal -->
+  <div id="legal-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 text-left relative shadow-2xl max-h-[85vh] overflow-y-auto custom-scrollbar">
+      <button onclick="closeLegalModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <h3 id="legal-title" class="text-xl font-bold text-white mb-4">Mentions Légales & CGV</h3>
+      <div id="legal-content" class="text-xs text-slate-300 space-y-3 leading-relaxed">
+        <!-- Injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-12 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-radar text-brand-400"></i>
+        <span class="font-bold text-slate-300">OmniCite AI SaaS</span>
+        <span>© 2026. Tous droits réservés.</span>
+      </div>
+      <div class="flex items-center space-x-6">
+        <button onclick="openLegal('mentions')" class="hover:text-slate-300 transition">Mentions Légales</button>
+        <button onclick="openLegal('cgv')" class="hover:text-slate-300 transition">CGV B2B</button>
+        <button onclick="openLegal('rgpd')" class="hover:text-slate-300 transition">Politique RGPD</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    let currentAuditData = null;
+    let chartInstance = null;
+
+    function fillExample(brand, domain, cat, comps) {
+      document.getElementById('brand-input').value = brand;
+      document.getElementById('domain-input').value = domain;
+      document.getElementById('category-input').value = cat;
+      document.getElementById('competitors-input').value = comps;
+      document.getElementById('audit-form').dispatchEvent(new Event('submit', {cancelable: true}));
+    }
+
+    async function handleAuditSubmit(e) {
+      e.preventDefault();
+      const brand = document.getElementById('brand-input').value.trim();
+      const domain = document.getElementById('domain-input').value.trim();
+      const category = document.getElementById('category-input').value.trim();
+      const competitors = document.getElementById('competitors-input').value.trim();
+
+      const btn = document.getElementById('submit-btn');
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Analyse des citations IA en cours...`;
+      btn.disabled = true;
+
+      try {
+        const resp = await fetch('/api/audit', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({brand_name: brand, domain, category, competitors})
+        });
+        const data = await resp.json();
+        currentAuditData = data;
+        renderAuditResults(data);
+        document.getElementById('results-section').classList.remove('hidden');
+        document.getElementById('results-section').scrollIntoView({behavior: 'smooth'});
+      } catch (err) {
+        alert("Erreur lors de la génération de l'audit : " + err.message);
+      } finally {
+        btn.innerHTML = `<span>Générer mon Score GEO & Audit IA (Gratuit)</span><i class="fa-solid fa-arrow-right ml-1"></i>`;
+        btn.disabled = false;
+      }
+    }
+
+    function renderAuditResults(data) {
+      document.getElementById('res-brand-title').innerText = `Audit GEO : ${data.brand_name}`;
+      document.getElementById('res-category-subtitle').innerText = `Secteur : ${data.category} | Domaine : ${data.domain}`;
+      document.getElementById('res-geo-score').innerText = `${data.geo_score}/100`;
+      document.getElementById('res-citation-rate').innerText = `${data.citation_rate}%`;
+      document.getElementById('res-sentiment-badge').innerText = data.sentiment;
+
+      // Render Engines List
+      const enginesList = document.getElementById('engines-list');
+      enginesList.innerHTML = '';
+      data.details.engines.forEach(eng => {
+        const statusIcon = eng.cited 
+          ? `<span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold"><i class="fa-solid fa-check mr-1"></i>Cité (Rang #${eng.rank})</span>`
+          : `<span class="text-xs px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 font-semibold"><i class="fa-solid fa-xmark mr-1"></i>Non Cité</span>`;
+        
+        enginesList.innerHTML += `
+          <div class="p-3 bg-slate-800/70 border border-slate-700/60 rounded-lg flex items-center justify-between text-xs">
+            <div>
+              <span class="font-bold text-slate-100">${eng.name}</span>
+              <p class="text-slate-400 text-[11px] mt-0.5">Source : ${eng.source}</p>
+            </div>
+            <div>${statusIcon}</div>
+          </div>
+        `;
+      });
+
+      // Render Recommendations
+      const recsList = document.getElementById('recs-list');
+      recsList.innerHTML = '';
+      data.recommendations.forEach(rec => {
+        recsList.innerHTML += `
+          <div class="p-4 bg-slate-800/60 border border-slate-700/60 rounded-xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 uppercase">${rec.priority}</span>
+                <span class="text-xs font-bold text-emerald-400">${rec.impact}</span>
+              </div>
+              <h5 class="font-bold text-white text-sm">${rec.title}</h5>
+              <p class="text-slate-400 text-xs mt-1 leading-relaxed">${rec.desc}</p>
+            </div>
+          </div>
+        `;
+      });
+
+      // Render Chart
+      renderSovChart(data.details.share_of_voice);
+    }
+
+    function renderSovChart(sovData) {
+      const ctx = document.getElementById('sovChart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+
+      const labels = Object.keys(sovData);
+      const values = Object.values(sovData);
+
+      chartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: values,
+            backgroundColor: ['#6366f1', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { color: '#cbd5e1', font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    async function handleSubscribe(plan) {
+      try {
+        const resp = await fetch('/api/stripe/create-checkout-session', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({plan})
+        });
+        const data = await resp.json();
+        if (data.url) {
+          window.open(data.url, '_blank');
+        }
+      } catch (err) {
+        alert("Erreur passerelle Stripe : " + err.message);
+      }
+    }
+
+    function openLeadModal() {
+      document.getElementById('lead-modal').classList.remove('hidden');
+    }
+    function closeLeadModal() {
+      document.getElementById('lead-modal').classList.add('hidden');
+    }
+
+    async function handleLeadSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('lead-email').value.trim();
+      if (!email) return;
+
+      try {
+        await fetch('/api/lead', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            email,
+            brand_name: currentAuditData ? currentAuditData.brand_name : 'Visiteur',
+            geo_score: currentAuditData ? currentAuditData.geo_score : 0,
+            audit_id: currentAuditData ? currentAuditData.id : 0
+          })
+        });
+
+        alert("Merci ! Votre rapport complet et les recommandations personnalisées ont été générés.");
+        closeLeadModal();
+
+        // Download JSON report instantly
+        const blob = new Blob([JSON.stringify(currentAuditData, null, 2)], {type: 'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Audit_GEO_${currentAuditData.brand_name.replace(' ', '_')}.json`;
+        a.click();
+      } catch (err) {
+        alert("Erreur lors de l'enregistrement du prospect : " + err.message);
+      }
+    }
+
+    function openLegal(type) {
+      const modal = document.getElementById('legal-modal');
+      const title = document.getElementById('legal-title');
+      const content = document.getElementById('legal-content');
+
+      if (type === 'mentions') {
+        title.innerText = "Mentions Légales (Loi LCEN / France & UE)";
+        content.innerHTML = `
+          <p><strong>Éditeur du service :</strong> OmniCite AI (En cours d'immatriculation / Micro-Entreprise).</p>
+          <p><strong>Directeur de la publication :</strong> Fondateur & Responsable Technique OmniCite.</p>
+          <p><strong>Hébergement :</strong> Serveurs cloud sécurisés conformes aux normes européennes de protection des données.</p>
+          <p><strong>Propriété intellectuelle :</strong> L'ensemble des marques, logos et algorithmes d'analyse GEO présents sur ce site sont la propriété exclusive de leurs auteurs.</p>
+        `;
+      } else if (type === 'cgv') {
+        title.innerText = "Conditions Générales de Vente (CGV B2B SaaS)";
+        content.innerHTML = `
+          <p><strong>1. Objet :</strong> Les présentes CGV régissent l'accès au service OmniCite AI sous forme d'abonnement mensuel sans engagement.</p>
+          <p><strong>2. Tarifs et Paiement :</strong> Les tarifs s'entendent en euros hors taxes. Le paiement s'effectue par carte bancaire via le prestataire sécurisé Stripe.</p>
+          <p><strong>3. Résiliation :</strong> L'abonnement est résiliable à tout moment depuis l'espace client avec effet à l'issue de la période mensuelle en cours.</p>
+          <p><strong>4. Droit de rétractation B2B :</strong> En accédant immédiatement aux outils d'audit numérique, le client professionnel renonce expressément au délai de rétractation conformément au Code de la consommation.</p>
+        `;
+      } else {
+        title.innerText = "Politique de Confidentialité (Conformité RGPD)";
+        content.innerHTML = `
+          <p><strong>1. Collecte des données :</strong> Nous collectons uniquement les adresses email fournies volontairement lors des demandes d'audit et les données publiques de visibilité web.</p>
+          <p><strong>2. Finalité :</strong> Fourniture du rapport d'audit GEO, alertes de positionnement et communication commerciale légitime relative au service.</p>
+          <p><strong>3. Vos droits :</strong> Vous disposez d'un droit d'accès, de rectification et de suppression de vos données sur simple demande par email.</p>
+        `;
+      }
+      modal.classList.remove('hidden');
+    }
+    function closeLegalModal() {
+      document.getElementById('legal-modal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
